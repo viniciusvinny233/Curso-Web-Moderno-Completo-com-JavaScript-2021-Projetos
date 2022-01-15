@@ -18,7 +18,7 @@ pilotos.splice(2, 0, 'Bottas', 'Massa')
 console.log(pilotos)
 
 // remover
-pilotos.splice(3, 1) // massa quebrou :(
+pilotos.splice(3, 1) // massa quebrou
 console.log(pilotos)
 
 const algunsPilotos1 = pilotos.slice(2) // novo array
