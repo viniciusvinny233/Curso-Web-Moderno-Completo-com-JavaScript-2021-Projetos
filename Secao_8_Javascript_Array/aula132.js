@@ -1,5 +1,5 @@
 const pilotos = ['Vettel', 'Alonso', 'Raikkonen', 'Massa']
-pilotos.pop() // massa quebrou o carro!
+pilotos.pop() // massa quebrou o carro
 console.log(pilotos)
 
 pilotos.push('Verstappen')
