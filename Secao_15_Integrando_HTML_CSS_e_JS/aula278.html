@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #03</title>
+    <link rel="stylesheet" href="components\css\estilo.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Formulário</h1>
+    <form name="pesquisa" action="http://www.google.com.br/search">
+        <input type="text" name="q" placeholder="Digite o termo...">
+        <select name="hl">
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="en-us">Inglês (Americano)</option>
+        </select>
+        <button name="botao">Pesquisar</button>
+    </form>
+    <script>
+        
+        console.log(document.forms)
+        console.log(document.pesquisa.q)
+        console.log(document.getElementsByName('hl'))
+        document.getElementsByName('q').value = 'Pão'
+        document.pesquisa.q.value = 'Aprendiz'
+        document.pesquisa.hl.value = 'en-us'
+        document.pesquisa.botao.value = 'Search'
+    
+    </script>
+</body>
+
+</html>
