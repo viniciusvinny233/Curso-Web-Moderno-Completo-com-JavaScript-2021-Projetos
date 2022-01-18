@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #01</title>
+    <link rel='stylesheet' href='components\css\estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <a href='https://www.cod3r.com.br'>Cod3r</a>
+    </div>
+    <div id='primeiro'>
+        <img id='img2' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png' alt='logo'>
+    </div>
+
+    <button onclick="AlteraImg('img2')">Clique para trocar a imagem</button>
+    <script>
+        var index = 0
+        function AlteraImg(local) {
+            for (i = 0; i < 1; i++) {
+                let resto = index % 2
+
+                if (resto == 0) {
+                    document.getElementById(local).src = "https://www.edsonemiliano.com.br/blog/wp-content/uploads/2015/04/icon.javascript.png"
+                } else {
+                    document.getElementById(local).src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png"
+                }
+                console.log(resto)
+            }
+            index++
+        }
+
+    </script>
+</body>''
+
+</html>
