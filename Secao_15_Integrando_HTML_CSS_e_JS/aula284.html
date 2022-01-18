@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='components\css\estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+    
+    const body = document.querySelector('body')
+    const div1 = document.createElement('div')
+    body.appendChild(div1)
+    div1.classList.add('destaque')
+
+    div1.innerHTML = "Primeiro"
+
+    const div2 = document.createElement('div')
+    const para = document.createElement('p')
+    para.innerHTML = "Segundo"
+    div2.appendChild(para)
+    body.appendChild(div2)
+
+    const div3 = document.createElement('div')
+    const para2 = document.createElement('p')
+    const para3 = document.createElement('p')
+    para3.appendChild(para2)
+    div3.appendChild(para3)
+    body.appendChild(div3)
+    para2.innerHTML = "Terceiro"
+
+    const texto = document.createTextNode('Antes...')
+    div3.insertBefore(texto, div3.childNodes[0])
+
+    const div4 = div3.cloneNode(true)
+    body.appendChild(div4)
+
+    </script>
+</body>
+
+</html>
