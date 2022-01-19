@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='components\css\estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a espera-2-s href="https://google.com.br" >Google</a>
+    </div>
+    <script>
+        function navegar2S(e) {
+            e.preventDefault()
+            console.log('Saindo em 2s...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 2000
+            )
+        }
+
+        const aEspera = document.querySelector('[espera-2-s]')
+        aEspera.onclick = navegar2S
+
+    </script>
+</body>
