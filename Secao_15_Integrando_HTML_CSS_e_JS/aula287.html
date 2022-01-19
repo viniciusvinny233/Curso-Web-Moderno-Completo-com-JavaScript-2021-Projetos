@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #02</title>
+    <link rel='stylesheet' href='components\css\estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div div1>Elemento</div>
+    <div div2>Elemento</div>
+    <div div3>Elemento</div>
+    <div div4>Elemento</div>
+
+    <script>
+
+        const item1 = document.querySelector('[div1]')
+        item1.style.position = 'absolute'
+
+        const item2 = document.querySelector('[div2]')
+        item2.style.position = 'absolute'
+
+        const item3 = document.querySelector('[div3]')
+        item3.style.position = 'absolute'
+
+        const item4 = document.querySelector('[div4]')
+        item4.style.position = 'absolute'
+
+        item1.onmousemove = e => {
+            const item = e.target
+            item.style.cursor = 'move'
+            if (e.buttons) {
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px `
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px `
+            }
+        }
+
+        item2.onmousemove = e => {
+            const item = e.target
+            item.style.cursor = 'move'
+            if (e.buttons) {
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px `
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px `
+            }
+        }
+
+        item3.onmousemove = e => {
+            const item = e.target
+            item.style.cursor = 'move'
+            if (e.buttons) {
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px `
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px `
+            }
+        }
+
+        item4.onmousemove = e => {
+            const item = e.target
+            item.style.cursor = 'move'
+            if (e.buttons) {
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px `
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px `
+            }
+        }
+
+    </script>
+</body>
