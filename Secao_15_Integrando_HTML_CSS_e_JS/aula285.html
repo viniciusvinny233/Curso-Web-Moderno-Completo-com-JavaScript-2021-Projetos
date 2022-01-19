@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='components\css\estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <script>
+        const div = document.querySelector('div')
+        const newP = document.createElement('p')
+        div.appendChild(newP)
+        newP.innerHTML = "Salveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+
+        div.insertAdjacentHTML("beforebegin", "<div class='destaque'><p>Antes Início</p></div>")
+        div.insertAdjacentHTML("afterend", "<div class='destaque'><p>Antes Início</p></div>")
+    </script>
+</body>
+
+</html>
