@@ -15,9 +15,6 @@ function Barreira(reversa = false) {
     this.setAltura = altura => corpo.style.height = `${altura}px`
 }
 
-// const b = new Barreira(true)
-// document.querySelector('[wm-flappy]').appendChild(b.elemento)
-
 function ParDeBarreiras(altura, abertura, x) {
     this.elemento = novoElemento('div', 'par-de-barreiras')
 
