@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Manipulando Atributos</title>
+    <link rel='stylesheet' href='components/css/estilo.css'>
+    <script src='components/js/jquery.js'></script>
+    <style>
+        [wm-relogio] {
+            text-align: center;
+        }
+
+        [wm-relogio] button {
+            font-size: 1.6em;
+            padding: 0px 25px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Manipulando Atributos</h1>
+    <div wm-relogio='1000'></div>
+    <script>
+
+
+        function Relogio(elemento) {
+            const HoraCerta = $('<p>').html('0')
+            const BotaoMais = $('<button>').html('+')
+            const BotaoMenos = $('<button>').html('-')
+
+            const $elemento = $(elemento)
+            $elemento.append(HoraCerta, BotaoMais, BotaoMenos)
+
+            const getInvervaloAtual = () => parseInt($elemento.attr('wm-relogio'))
+
+            let temporizador = null
+
+            const iniciar = () => {
+                if (temporizador) clearInterval(temporizador)
+                temporizador = setInterval(() => {
+                    HoraCerta.html(new Date().toLocaleString('pt-BR'))
+                }, getInvervaloAtual())
+            }
+
+            const alterarIntervalo = delta => {
+                const novo = Math.max(getInvervaloAtual() + delta , 1000)
+                $elemento.attr('wm-relogio', novo)
+                iniciar()
+            }
+
+            BotaoMais.click(e => alterarIntervalo(1000))
+            BotaoMenos.click(e => alterarIntervalo(-1000))
+
+            iniciar()
+        }
+
+        $('[wm-relogio]').each((i, e) => new Relogio(e))
+
+    </script>
+</body>
