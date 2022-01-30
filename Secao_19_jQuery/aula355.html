@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Eventos #03</title>
+    <link rel='stylesheet' href='components/css/estilo.css'>
+    <script src='components/js/jquery.js'></script>
+    <style>
+        input {
+            font-size: 2em;
+        }
+
+        #resultado {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Eventos #03</h1>
+    <div id='div1'>1</div>
+    <div id='div2'>2</div>
+    <input id='input1' type='text' placeholder='Digite Algo!'>
+    <span id='resultado'></span>
+
+    <script>
+        
+        function ShowData(e) {
+            $('#resultado').empty()
+
+            const div1 = $('<div>')
+            const div2 = $('<div>')
+
+            $('#resultado').append(div1, div2)
+            div1.append(`target: ${e.target.id}`)
+            div1.append(`<br>type: ${e.type}`)
+        }
+
+        $('#div1, #div2').on('mouseenter mouseleave', ShowData)
+        $('input').keyup(ShowData)
+
+    </script>
+</body>
