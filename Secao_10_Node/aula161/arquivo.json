@@ -1,0 +1,7 @@
+{
+    "db": {
+        "local": 1253,
+        "host": "Admin",
+        "porta": 8080
+    }
+}
